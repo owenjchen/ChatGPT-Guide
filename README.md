@@ -17,7 +17,7 @@ ChatGPT Guide is the only guide that you need for everything ChatGPT - including
 
 ## [ChatGPT Technical Guide](./techguide.md)
 
-## [ChatGPT Resources](./resoruces.md)
+## [ChatGPT Resources](./resources.md)
 
 ## [ChatGPT Alterantives](./alternatives.md)
 

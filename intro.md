@@ -124,15 +124,17 @@ ChatGPT: Sure, here's an example implementation of a Python class for a binary t
         def get_root_val(self):
             return self.value
 
+
 <hr>
 
-## Links to other sections of the One ChatGPT Guide
-## [One ChatGPT Guide](./README.md)
+## [ChatGPT Guide](./README.md)
+### [What is ChatGPT and How to get started?](./intro.md)
+### [ChatGPT FAQs](./faq.md)
 ### [ChatGPT News](./news.md)
 ### [ChatGPT Prompt Templates](./prompts.md)
-### [ChatGPT Technical Guide](./guide.md)
-### [ChatGPT Resources](./resoruces.md)
-### [ChatGPT Alterantives](./others.md)
+### [ChatGPT Technical Guide](./techguide.md)
+### [ChatGPT Resources](./resources.md)
+### [ChatGPT Alterantives](./alternatives.md)
 ### [ChatGPT Papers](./papers.md)
 
 <hr>

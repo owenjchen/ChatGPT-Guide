@@ -88,12 +88,22 @@ None specifically targeting ChatGPT. But OpenAI is involved in at least one laws
 ## Are there issues regarding plagiarism with ChatGPT?
 Yes. Text-generating AI models like ChatGPT have a tendency to regurgitate content from their training data.
 
-## Links to other sections of the One ChatGPT Guide
 
+<hr>
+
+## [ChatGPT Guide](./README.md)
+### [What is ChatGPT and How to get started?](./intro.md)
+### [ChatGPT FAQs](./faq.md)
 ### [ChatGPT News](./news.md)
 ### [ChatGPT Prompt Templates](./prompts.md)
-### [ChatGPT Technical Guide](./guide.md)
-### [ChatGPT Resources](./resoruces.md)
-### [ChatGPT Alterantives](./others.md)
+### [ChatGPT Technical Guide](./techguide.md)
+### [ChatGPT Resources](./resources.md)
+### [ChatGPT Alterantives](./alternatives.md)
 ### [ChatGPT Papers](./papers.md)
 
+<hr>
+
+### [License: MIT License](LICENSE)
+
+### Last Updated by: Owen Chen, Ph.D.
+### Date: April 25, 2023

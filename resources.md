@@ -19,15 +19,17 @@ The links below provide the latest news and annoucements on ChatGPT
 
 
 
+
 <hr>
 
-## Links to other sections of the One ChatGPT Guide
-## [One ChatGPT Guide](./README.md)
+## [ChatGPT Guide](./README.md)
+### [What is ChatGPT and How to get started?](./intro.md)
+### [ChatGPT FAQs](./faq.md)
 ### [ChatGPT News](./news.md)
 ### [ChatGPT Prompt Templates](./prompts.md)
-### [ChatGPT Technical Guide](./guide.md)
-### [ChatGPT Resources](./resoruces.md)
-### [ChatGPT Alterantives](./others.md)
+### [ChatGPT Technical Guide](./techguide.md)
+### [ChatGPT Resources](./resources.md)
+### [ChatGPT Alterantives](./alternatives.md)
 ### [ChatGPT Papers](./papers.md)
 
 <hr>
