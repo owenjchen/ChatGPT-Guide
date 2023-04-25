@@ -1,5 +1,5 @@
-# One-ChatGPT Guide
-One ChatGPT is the only guide that you need for everything ChatGPT.ChatGPT guides, links and resources on ChatGPT and other large language models curated by Dr. Owen Chen.
+# ChatGPT Guide
+ChatGPT Guide is the only guide that you need for everything ChatGPT - including tutorials, links and resources on ChatGPT and other large language models curated by Dr. Owen Chen.
 
 ## [What is ChatGPT and How to get started?](./intro.md)
 
