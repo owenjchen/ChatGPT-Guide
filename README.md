@@ -3,11 +3,7 @@ ChatGPT Guide is the only guide that you need for everything ChatGPT - including
 
 ## [What is ChatGPT and How to get started?](./intro.md)
 
-## Official Resources
-
-- [ChatGPT app](https://chat.openai.com/)
-- [ChatGPT overview](https://openai.com/blog/chatgpt/)
-- [ChatGTP Discord](https://discord.com/invite/openai)
+### [Coding with ChatGPT](./code.md)
 
 ## [ChatGPT FAQs](./faq.md)
 

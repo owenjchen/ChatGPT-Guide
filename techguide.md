@@ -267,6 +267,7 @@ ChatGPT currently supports more than **50 languages**, including
 
 ## [ChatGPT Guide](./README.md)
 ### [What is ChatGPT and How to get started?](./intro.md)
+### [Coding with ChatGPT](./code.md)
 ### [ChatGPT FAQs](./faq.md)
 ### [ChatGPT News](./news.md)
 ### [ChatGPT Prompt Templates](./prompts.md)

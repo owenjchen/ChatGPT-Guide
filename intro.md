@@ -17,6 +17,12 @@ ChatGPT's primary function is conversation AI, that is an AI engine can communic
 
 In addition, ChatGPT can perform other tasks that involve natural language processing, such as text classification, sentiment analysis, language translation, summarization, and more. 
 
+## Official Resources
+
+- [ChatGPT app](https://chat.openai.com/)
+- [ChatGPT overview](https://openai.com/blog/chatgpt/)
+- [ChatGTP Discord](https://discord.com/invite/openai)
+
 ## What Can ChatGPT Do?
 
 Here are some example use cases of ChatGPT:

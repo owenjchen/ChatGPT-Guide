@@ -58,13 +58,15 @@ GitHub Copilot uses the OpenAI Codex to suggest code and entire functions in rea
 
 <hr>
 
-## Links to other sections of the One ChatGPT Guide
-
+## [ChatGPT Guide](./README.md)
+### [What is ChatGPT and How to get started?](./intro.md)
+### [Coding with ChatGPT](./code.md)
+### [ChatGPT FAQs](./faq.md)
 ### [ChatGPT News](./news.md)
 ### [ChatGPT Prompt Templates](./prompts.md)
-### [ChatGPT Technical Guide](./guide.md)
-### [ChatGPT Resources](./resoruces.md)
-### [ChatGPT Alterantives](./others.md)
+### [ChatGPT Technical Guide](./techguide.md)
+### [ChatGPT Resources](./resources.md)
+### [ChatGPT Alterantives](./alternatives.md)
 ### [ChatGPT Papers](./papers.md)
 
 <hr>
