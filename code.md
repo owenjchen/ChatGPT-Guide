@@ -168,7 +168,7 @@ ChatGPT, Bard, Bing and Claude+ are very good on writing a short programming cod
 
 All of the AI engines produce code to use numeric numbers from 0 to n to represent a graph with n+1 vertices.  They do not allow any string node label.
 
-Below is the code that I wrote for my students in the ACSL class for a directed graph.  This version allows string names for nodes (vertices).
+Below is the code that I wrote for my students in the ACSL class for a directed graph and an undirected graph.  This version allows string names for nodes (vertices).
 
 
     """
@@ -211,7 +211,7 @@ Below is the code that I wrote for my students in the ACSL class for a directed 
             self.nedges += 1 
 
         def build_adjacency_matrix(self):
-            nnodes = self.nnodes
+            nnodes = len(self.nodes)
             self.adjacency_matrix = [ [0]*nnodes for _ in range(nnodes)]
             for i in range(nnodes):
                 for j in range(nnodes):
@@ -242,7 +242,7 @@ Below is the code that I wrote for my students in the ACSL class for a directed 
                 
         def print_adjacency_matrix(self):
             result = 'Adjacency Matrix: \n    ['
-            for i in range(self.nnodes):
+            for i in range(len(self.nodes)):
                 result += '[' + ','.join([str(k) for k in self.adjacency_matrix[i]]) + ']\n    '
             # Replace last return with ']'
             result = result[:-5]  + ']\n'
@@ -257,52 +257,53 @@ Below is the code that I wrote for my students in the ACSL class for a directed 
         
         def detect_cycle(self):
             """
-            Detect whether the graph has a cycle
+            Detect whether the graph has a cycle by walking with Depth First Search (DFS) 
+            Use two sets:  visited, and recursiveStack to mark the walk. 
             Returns true if graph is cyclic else false
             """
-            visited = {node:False for node in self.nodes}
-            recursiveStack = {node:False for node in self.nodes}
+            visited = set()
+            recursiveStack = set()
             
             for node in self.nodes:
-                if not visited[node]:
+                if node not in visited:
                     if self.dfs_detect_cycle(node, visited, recursiveStack):
                         return True
             return False
         
         def dfs_detect_cycle(self, v, visited, recursiveStack):
-            """ Mark current node as visited and adds to recursion stack"""
-            visited[v] = True
-            recursiveStack[v] = True
-
-            # Recursive for all neighbours
-            # if any neighbour is visited and in
-            # recursiveStack then graph is cyclic
+            """ Mark current node as visited and adds to recursion stack"""        
+            visited.add(v)
+            # push current node to stack
+            recursiveStack.add(v)
+            
+            # Recursive for all neighbours 
+            # if any neighbour is visited and in recursiveStack then graph is cyclic
             for neighbor in self.get_neighbors(v):
-                if not visited[neighbor]:
+                if neighbor not in visited:
                     if self.dfs_detect_cycle(neighbor, visited, recursiveStack):
                         return True
-                elif recursiveStack[neighbor]:
+                elif neighbor in recursiveStack:
                     return True
 
-            # The node needs to be popped from
-            # recursion stack before function ends
-            recursiveStack[v] = False
+            # Pop the current node
+            recursiveStack.remove(v)
             return False
 
         
-    # Undirected Graph
+
+    # Undirected Graph - only need to update add_edge() function
     class Graph(DiGraph):
         """
         An undirected Graph class in which all edges are bidirectional
-        """
+        """    
         def add_edge(self, src, dest):
             DiGraph.add_edge(self, src, dest)
-            DiGraph.add_edge(self, dest, src)                                            
+            DiGraph.add_edge(self, dest, src)                                              
 
 
     # Test code
     if __name__ == '__main__' :    
-        # create a directed graph 
+        print("Create a directed graph")
         graph = DiGraph()
 
         # add the nodes to the graph
@@ -347,9 +348,9 @@ Below is the code that I wrote for my students in the ACSL class for a directed 
             print("Graph has at least one cycle.")
         else:
             print("Graph has no cycle.")           
-
-
+            
         # create an undirected graph 
+        print("Create an undirected graph:")
         graph2 = Graph()
 
         # add the nodes to the graph
@@ -381,19 +382,7 @@ Below is the code that I wrote for my students in the ACSL class for a directed 
             print("Graph has at least one cycle.")
         else:
             print("Graph has no cycle.")
-            
-        print("add a new edge (e-->a)")
-        graph2.add_edge('e','a') 
-        graph2.build_adjacency_matrix()    
-        # print the graph
-        print('The nodes and edges in the graph are:')
-        print(graph2)
-        
-        # detect cycle
-        if (graph2.detect_cycle()):
-            print("Graph has at least one cycle.")
-        else:
-            print("Graph has no cycle.")           
+                
 
 Here is the output from my code on a directed graph example:
 

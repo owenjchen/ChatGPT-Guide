@@ -84,36 +84,36 @@ class DiGraph(object):
     
     def detect_cycle(self):
         """
-        Detect whether the graph has a cycle
+        Detect whether the graph has a cycle by walking with Depth First Search (DFS) 
+        Use two sets:  visited, and recursiveStack to mark the walk. 
         Returns true if graph is cyclic else false
         """
-        visited = {node:False for node in self.nodes}
-        recursiveStack = {node:False for node in self.nodes}
+        visited = set()
+        recursiveStack = set()
         
         for node in self.nodes:
-            if not visited[node]:
+            if node not in visited:
                 if self.dfs_detect_cycle(node, visited, recursiveStack):
                     return True
         return False
     
     def dfs_detect_cycle(self, v, visited, recursiveStack):
-        """ Mark current node as visited and adds to recursion stack"""
-        visited[v] = True
-        recursiveStack[v] = True
-
-		# Recursive for all neighbours
-		# if any neighbour is visited and in
-		# recursiveStack then graph is cyclic
+        """ Mark current node as visited and adds to recursion stack"""        
+        visited.add(v)
+        # push current node to stack
+        recursiveStack.add(v)
+        
+		# Recursive for all neighbours 
+        # if any neighbour is visited and in recursiveStack then graph is cyclic
         for neighbor in self.get_neighbors(v):
-            if not visited[neighbor]:
+            if neighbor not in visited:
                 if self.dfs_detect_cycle(neighbor, visited, recursiveStack):
                     return True
-            elif recursiveStack[neighbor]:
+            elif neighbor in recursiveStack:
                 return True
 
-        # The node needs to be popped from
-        # recursion stack before function ends
-        recursiveStack[v] = False
+        # Pop the current node
+        recursiveStack.remove(v)
         return False
 
     
