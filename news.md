@@ -36,6 +36,7 @@ The links below provide the latest news and annoucements on ChatGPT
 
 ## [ChatGPT Guide](./README.md)
 ### [What is ChatGPT and How to get started?](./intro.md)
+### [Coding with ChatGPT](./code.md)
 ### [ChatGPT FAQs](./faq.md)
 ### [ChatGPT News](./news.md)
 ### [ChatGPT Prompt Templates](./prompts.md)
