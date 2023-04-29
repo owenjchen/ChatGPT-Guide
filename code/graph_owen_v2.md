@@ -29,9 +29,6 @@ nodes = [node for node in graph.nodes()]
 nodes
 ```
 
-
-
-
     ['a', 'b', 'c', 'd', 'e']
 
 
@@ -41,8 +38,6 @@ nodes
 edges = [edge for edge in graph.edges()]
 edges
 ```
-
-
 
 
     [('a', 'b'),
@@ -69,9 +64,6 @@ print(mat.todense())
      [0 0 0 0 0]]
 
 
-    /tmp/ipykernel_288/2671920032.py:1: FutureWarning: adjacency_matrix will return a scipy.sparse array instead of a matrix in Networkx 3.0.
-      mat = nx.adjacency_matrix(graph, dtype=np.int32)
-
 
 
 ```python
@@ -81,25 +73,9 @@ nx.draw_networkx_labels(graph, pos=positions, font_color="w")
 nx.draw_networkx_edges(graph,pos=positions, arrowstyle="->")
 ```
 
-
-
-
-    [<matplotlib.patches.FancyArrowPatch at 0x7fb30e2e4430>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2e4670>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2e4a90>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2e4ca0>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2e4fd0>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2ef160>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2ef3a0>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2ef5e0>]
-
-
-
-
     
-![png](output_6_1.png)
+![png](../img/output_6_1.png)
     
-
 
 
 ```python
@@ -114,6 +90,24 @@ else:
 
 
 ```python
+# Detect cycles in the graph
+cycles = list(nx.simple_cycles(graph))
+
+# Print the cycles in the graph
+if cycles:
+    print("Cycles in the graph:")
+    for cycle in cycles:
+        print(cycle)
+else:
+    print("No cycles in the graph")
+
+```
+
+    No cycles in the graph
+
+
+
+```python
 graph.add_edge('e','a')
 ```
 
@@ -122,8 +116,6 @@ graph.add_edge('e','a')
 edges = [edge for edge in graph.edges()]
 edges
 ```
-
-
 
 
     [('a', 'b'),
@@ -163,26 +155,9 @@ nx.draw_networkx_labels(graph, pos=positions, font_color="w")
 nx.draw_networkx_edges(graph,pos=positions, arrowstyle="->")
 ```
 
-
-
-
-    [<matplotlib.patches.FancyArrowPatch at 0x7fb30e2dd2e0>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2dd520>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2dd940>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2c3d60>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2ddd00>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e2dde80>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e268220>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e268430>,
-     <matplotlib.patches.FancyArrowPatch at 0x7fb30e268670>]
-
-
-
-
     
-![png](output_11_1.png)
+![png](../img/output_11_1.png)
     
-
 
 
 ```python
@@ -197,5 +172,24 @@ else:
 
 
 ```python
+# Detect cycles in the graph
+cycles = list(nx.simple_cycles(graph))
 
+# Print the cycles in the graph
+if cycles:
+    print("Cycles in the graph:")
+    for cycle in cycles:
+        print(cycle)
+else:
+    print("No cycles in the graph")
 ```
+
+    Cycles in the graph:
+    ['c', 'e', 'a']
+    ['c', 'e', 'a', 'b']
+    ['c', 'd', 'e', 'a']
+    ['c', 'd', 'e', 'a', 'b']
+    ['d', 'e', 'a']
+    ['d', 'e', 'a', 'b']
+
+
