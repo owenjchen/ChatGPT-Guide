@@ -39,7 +39,43 @@ ChatGPT currently supports more than **50 languages**, including
     and many more
 
 
-## Developer Libraries, SDKs, and APIs
+
+## OpenAI Developer Resources
+
+- OpenAI Developer Overview:
+https://platform.openai.com/overview
+
+- OpenAI Chat Completions API (ChatGPT API, i.e. GPT3.5 API):
+https://platform.openai.com/docs/guides/chat
+
+- OpenAI Text Completions API (GPT3 API)
+https://platform.openai.com/docs/guides/completion
+
+- Image Generation (DALL-E Models)
+https://platform.openai.com/docs/guides/images
+
+- Embeddings:
+https://platform.openai.com/docs/guides/embeddings
+
+- Speech to text:
+https://platform.openai.com/docs/guides/speech-to-text
+
+- Moderation:
+https://platform.openai.com/docs/guides/moderation
+
+- Rate limits:
+https://platform.openai.com/docs/guides/rate-limits/overview
+
+- OpenAI API Reference:
+https://platform.openai.com/docs/api-reference/introduction
+
+## OpenAI ChatGPT Plugins:
+OpenAI plugins connect ChatGPT to third-party applications. These plugins enable ChatGPT to interact with APIs defined by developers, enhancing ChatGPT's capabilities and allowing it to perform a wide range of actions.
+
+https://platform.openai.com/docs/plugins/introduction
+
+
+## Third-Party Developer Libraries, SDKs, and APIs
 
 ### Python
 
