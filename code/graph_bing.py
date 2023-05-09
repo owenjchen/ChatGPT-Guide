@@ -66,3 +66,26 @@ if g.detect_cycle():
     print("\nCycle detected!")
 else:
     print("\nNo cycle detected.")        
+    
+def test_graph():
+    # Test case 1: Create a graph with 4 vertices
+    g = Graph(4)
+    assert g.adj_matrix == [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+
+    # Test case 2: Add edges to the graph
+    g.add_edge(0, 1)
+    g.add_edge(1, 2)
+    g.add_edge(2, 3)
+    assert g.adj_matrix == [[0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1], [0, 0, 0, 0]]
+
+    # Test case 3: Remove an edge from the graph
+    g.remove_edge(1, 2)
+    assert g.adj_matrix == [[0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 0]]
+
+    # Test case 4: Detect cycle in the graph
+    assert g.detect_cycle() == False
+    g.add_edge(3,1)
+    assert g.detect_cycle() == True
+
+test_graph()
+    
