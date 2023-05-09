@@ -153,6 +153,21 @@ Unfortunately, Bing Chat gave a **wrong code** to detect a cycle! It does not ch
 
 It is disappointed that GPT4-based Bing Chat fails on this tasks while ChatGPT succeeds.  It could be due to a weakness in Bing's Prometheus tool.
 
+## Ask Bing Chat to Dbug the code
+
+    Owen: You are a Python code debugger. There is a bug in the code below on a directed graph class. Find out where the bug is.
+
+    Bing Chat: I’m sorry, but I’m not a Python code debugger. I’m a chatbot powered by Microsoft Bing search engine. I can help you find information about Python debugging or directed graphs if you’d like. Is there anything specific you would like to know?
+
+![](./img/Bing-debug_code.png)
+
+I tried to give a more detailed information on the bug, but Bing Chat still would not debug the code.
+
+    Owen: The bove detect_cycle method has a bug. Do a debugging on the method and fix the code.
+
+    Bing Chat: I’m sorry for any confusion. I am not a Python code debugger and I cannot debug the detect_cycle method you mentioned. However, I can explain how the detect_cycle method works.
+
+
 ### Claude+
 I test Claude+ on Poe.com to write code on directed graph data structure as well.
 ![](./img/claude+code-graph1.png)
@@ -564,7 +579,11 @@ else:
     ['d', 'e', 'a', 'b']
 
 
+## Use ChatGPT to Generate Tests
 
+    Owen: Create test cases for the above Graph class code.
+    
+![png](./img/Bing-chat-test-code.png)
 
 <hr>
 
